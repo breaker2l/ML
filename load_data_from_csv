@@ -1,0 +1,26 @@
+#Pima Indians Diabetes Dataset https://goo.gl/2tMFne or https://goo.gl/kPGbzi
+
+from csv import reader
+
+#Load a csv file
+def load_csv(filename):
+  file = open(filename, "r")
+  lines = reader(file)
+  dataset = list(lines)
+  return dataset
+  
+def load_csv(filename):
+   dataset = list()
+   with open(filename,'r') as file:
+   csv_reader = reader(file)
+   for row in csv_reader:
+     if not row:
+       continue
+     dataset.append(row)
+   return datset
+   
+#Load dataset
+filename = '.csv'
+dataset = load_csv(filename)
+print('loaded data file {0} with {1} rows and {2} columns'.format(filename,len(dataset),len(datset[0])))
+
