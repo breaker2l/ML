@@ -40,3 +40,21 @@ def standardize_dataset(dataset,means,stdevs):
   for row in dataset:
     for i in range(len(row)):
       row[i] = (row[i] - means[i]) / stdevs[i]
+
+#Load dataset
+filename = '.csv'
+dataset = load_csv(filename)
+print('Load data file {0} with {1} rows and {2} columns'.format(filename,len(dataset),len(dataset[0])))
+
+#convert string columns to float
+for i in range(len(dataset[0])):
+   str_column_to_float(dataset, i)
+print(dataset[0])
+
+#Estimate mean and standard deviation
+means = column_means(dataset)
+stdevs = column_stdevs(dataset , means)
+
+#standardize dataset
+standardize_dataset(dataset, means , stdevs)
+print(datset[0])
