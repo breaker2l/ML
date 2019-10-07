@@ -1,0 +1,32 @@
+A RegEx, or Regular Expression, is a sequence of characters that forms a search pattern.
+
+RegEx can be used to check if a string contains the specified search pattern.
+
+import re
+#findall() function eg
+str = "The rain in Spain"
+x = re.findall("ai", str)
+print(x)
+
+#findall() function if not found
+
+x = re.findall("Portugal", str)
+print(x)
+
+if (x):
+  print("Yes, there is at least one match!")
+else:
+  print("No match")
+
+#The sub() function replaces the matches with the text of your choice
+#/s = space
+str = "The rain in Spain"
+x = re.sub("\s", "9", str)
+print(x)
+
+#You can control the number of replacements by specifying the count parameter
+str = "The rain in Spain"
+x = re.sub("\s", "9", str, 2)
+print(x)
+
+https://www.regular-expressions.info/characters.html
