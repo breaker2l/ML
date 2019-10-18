@@ -1,0 +1,93 @@
+1) Deep Learning library 
+High level Neural Network API
+Runs on Top of tensorflow,Theano or CNTK
+
+2)Keras - Modular
+Building models is as simple as stacking layers and connecting graphs
+
+3)Open source
+Actively developed by contribution across the world!
+Good amount of documentation
+
+4)High performance
+High performing API used to specify and train differentiable programs
+
+What Makes keras special 
+
+Focus on user experience
+Large adoption in the industry
+Multi backend,multi platform(Tensorflow,CNTK,Theono,MXNet)
+Research community
+Easy to grasp all concepts
+Runs seamlessly on CPU and GPU 
+Fast protyping
+Production Models (TF-serving ,GPU accelration(webKeras,Keras.js,Android(TF,TF Lite),ios(NAtive CoreML),Raspberry pi)
+
+
+Working principle-Backend
+1) Expressing complex expressions as a combination of simple operations
+2) Useful for calculating deriavatives during backpropagation
+3) Easier to implement distributed computation
+4) Just specify the inputs,outputs and make sure the graph is connected
+
+Keras Models
+
+Sequential Model
+-Linear stack of layers
+-Useful for building simple models
+ simple classification network
+ Encoder-Decoder models
+-The model we all know and lov?
+-Treat each layer as object that feeds into the next
+
+import keras 
+from keras import layers
+
+model = keras.Sequential()
+model.add(layers.Dense(20,activation='relu',input_shape=(10,)))
+model.add(layers.Dense(20, activation='relu'))
+model.add(layers.Dense(20, activation='softmax'))
+
+model.fit(x, y, epochs=10,batch_size=32)
+
+Functional Model
+1)Multi-input,multi-output and arbitrary static graph topologies
+2)Multi-input and Multi -Output models
+3)Complex models which forks into 2 or more branches
+4)Models with shared(Weights) layers
+
+import keras 
+from keras import layers
+
+inputs = keras.Input(shape(10,))
+x = layers.Dense(20, activation='relu')(x)
+x = layers.DEnse(20,activation='relu')(x)
+outputs = layer.Dense(10, activation='softmax')(x)
+
+model = keras.Model(inputs,outputs)
+model.fits(x,y,epochs=10,batch-size=32)
+
+#Implementing A Neural Network
+1)Prepare Input
+-preparing the input and specify the input dimension(size)
+-images,videos,test and audio
+
+2)Define the ANN model
+-Define the model architecture and build the computational graph
+-Sequential or Functional style
+-MLP,CNN,RNN
+
+3)Optimizers
+-specify the optimizer and configure the learning process
+-AGD,RMSprop,Adam
+
+4)Loss Function
+-Specify the inputs,outputs of the computational graph (model) and the Loss function
+-MSE,Cross Entropy,Hinge
+
+5)Train and Evaluate Model
+-Train the model based on the training data
+-Test the model on the dataset with the testing data
+
+
+
